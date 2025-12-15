@@ -1,0 +1,100 @@
+Overview
+System modeling is a powerful analysis approach that is capable of providing accurate design information in a time-efficient manner.  However, before using flowBench to model a system, it is important to understand the physical assumptions and mathematical basis upon which flowBench is based.  By doing so, you will properly employ flowBench and maximize its potential benefit in design and analysis.
+
+In general, system modeling is very appropriate for situations in which spatially-averaged information is satisfactory.  For example, if you were optimizing an engine design and investigating the effect of manifold volume on volumetric efficiency, the precise spatial variation of pressure within a given cylinder may not be essential.  Instead, it is more important to capture the effect that the manifold volume has on the entire engine by accounting for all interdependencies between the various components that constitute the engine.
+
+Keep in mind that although spatial averaging (representing the pressure, temperature, etc. within a component by a single value) is employed in flowBench, the governing laws of nature are still satisfied (within the specified tolerance).  Therefore, the results produced by flowBench are mathematically valid and satisfy the conservation of mass, momentum, and energy.
+
+System Modeling
+In a system model, the spatial variations of properties such as pressure, temperature, and density are not determined within a component.  Rather, spatially-averaged quantities are determined for each component and link.  This modeling approach is usually referred to as “lumping” because a single or “lumped” value of a variable is used to represent a single component.
+
+By employing a lumped approach, the amount of information required specifying an individual component and hence, the entire network, is significantly reduced.  An additional benefit of this approach is a dramatic reduction in the computational time required to conduct a simulation.
+
+A flowBench model will be capable of indicating essential performance characteristics, such as:
+
+·       the component that has maximum or minimum pressure drop
+
+·       which fan or pump will provide a specified flow rate to a particular part of a system
+
+·       the required resistance for a baffle to balance flow to a number of rooms in a building
+
+·       the surface area required to keep a component below some prescribed temperature
+
+·       the amount of heat rejection required to keep a portion of a system at an acceptable level
+
+·       the effect of valve timing on volumetric efficiency
+
+With practice, you will learn to use flowBench to conduct initial explorations of a design space or several “What if” type analyses to streamline the development cycle.  By using flowBench to quickly determine which design modifications are beneficial and then focusing more costly techniques, such as CFD or prototyping, to develop these approaches, you will reduce your design cycle.
+Network Building Blocks
+To employ a system model, you must construct a network representation of your system.  To construct a network, first identify the components and links that form the system.  In some cases, the constituent components will be readily identifiable, like an elbow connecting two ducts.  In other cases, some degree of abstraction is required to model a component.  For example, in the ninety-degree turn a flow experiences when entering a PC cabinet.  In each of these cases, the elbow component would be used to represent the turn that the flow experiences.  Through practice, you will develop the capability of quickly recognizing the appropriate component to represent your system components.
+
+Components
+Components can be categorized into five basic types: resistive, junction, flow driving, boundary, and advanced.
+
+·       Resistive components are used to represent a portion of your system through which a pressure drop occurs because of a geometry change.
+
+·       Junction components are used to represent the losses induced from multiple flows coming together.
+
+·       Flow driving components are used to represent fans, pumps, or blowers that drive flow through your system.
+
+·       Boundary components are used to represent the interface of your system with the environment.
+
+·       Advanced components are used to represent unique components that are not available in flowBench.
+Links
+Links represent paths through which flow is transferred between components. flowBench allows use of five types of links – Standard, Specified Flow, Zero Resistance, Card Passage, and User Defined.  A Standard link represents a pipe or a duct while a User Defined link allows the user to specify the desired pressure loss correlation.  Typically, two components are connected by link with pressure losses.  However, flowBench also allows use of Zero Resistance links.  Such links are used to make logical connection between components i.e. simply direct the flow from one component to another without any pressure losses. For example, such a link can be used to join a screen directly to a tee. A Card Passage link represents the passage formed between two successive printed circuit boards (PCBs). Such PCBs that have electronic components mounted on them are encountered in a variety of electronics systems. Finally, the use of a Specified Flow Rate link allows modeling of the system performance for a specified flow at desired locations.
+Network Construction
+To select and place a component in the workspace, do the following:
+
+Þ  Position the mouse pointer over the desired component in the toolbox and click mouse button.  You will notice that the component button will look depressed.
+
+Þ  Move the mouse pointer to a desired location within the workspace and click the mouse button, thus placing the component.
+
+By double clicking the component button within the toolbox, multiple placements are possible.  You will notice that the depressed component button will become shaded.  At this point, every time you click the mouse button, a component will be placed.  To deselect a double-clicked component button, move the mouse over the arrow in the Toolbox and press the left mouse button.
+
+After a component has been placed, you will notice a number of unfulfilled connections.  These connections are indicated with the use of a “splash”.  Every available connection on a component must be fulfilled for the network to be valid.  flowBench will perform a check to insure that this has been accomplished before a simulation can be conducted.
+
+Some components permit multiple connections at a single location.  Such connections will turn blue after the initial connection has been successfully made.
+Use of Multipliers
+Practical flow systems often contain identical flow elements that are connected in parallel.  For example, the system may be fed by multiple reservoirs through identical passages or the flow can exit the system through identical parallel conduits.  Similarly, the flow in a system may be driven by a set of identical fans or pumps that are placed in parallel for increasing the flow rate of the system.
+
+In flowBench, the facility of multipliers is provided to specify parallel repetitions of a portion of the network.  This enables convenient representation of multiple parallel flow connections because the repetitive portion of the network needs only to be constructed once.  Further, different sections of the network can have different multipliers associated with them.  The multiplier for any desired portion of the network is specified by simply selecting the portion to be repeated and inputting the desired multiplier (Set Multiplier from the Edit Pulldown Menu).
+
+During the calculation of the flow and heat transfer in a network with multipliers, the characteristics of a single repetitive unit of the multiplied portion of the network are first calculated and then used in parallel combination to determine flow and energy distributions in the overall system.  Thus, the reported results for the repetitive portion of the network contain the computed quantities for a single unit of the multiplied portion.
+Conservation Equations
+Once a network has been constructed, the appropriate forms of conservation are applied.  For example, for a fluid flow calculation, conservation of mass and momentum are applied, while conservation of energy would also be enforced for heat and fluid flow.
+Assumptions
+The major assumptions incorporated in flowBench’s mathematical formulation are:
+
+·       Sonic or Subsonic flow
+
+·       Single-phase flow within any component or link in the system
+
+·       Spatial-averaging of properties and state variables is appropriate
+
+·       Simple compressible substance
+
+Although flowBench employs a compressible formulation for density, a supersonic flow cannot be modeled using flowBench. This is because, under certain conditions, supersonic flow involves shock formations and this leaves the resistance characteristics of components nonunique. However, the mathematical framework provided by flowBench does permit the simulation of systems that exhibit choking phenomena.
+
+The default equation of state used in flowBench is based on the Principal of Corresponding States.  Great care was taken to ensure that the implementation of this equation of state is valid over the liquid and vapor phases.  However, within any individual component or link only a single phase can exist at a given time.  This formulation does permit phase change to occur within the system.  For example, a liquid can flow through an orifice and exit as a vapor, should the pressure drop be sufficiently large.
+
+For any spatial variation of a property or state variable, a mathematical average can always be calculated.  However, significant spatial variations or gradients in certain variables can strongly influence local physics.  For example, a temperature gradient within a plenum can induce natural convection, leading to a secondary flow.  The resistance for flow will be affected by the presence of the secondary flow, which is not accounted for by flowBench.
+
+A simple compressible substance is one in which the only relevant reversible work mode is compression.  For such a substance, the state can be completely identified by two independent thermodynamic variables, for example pressure and temperature.  Some substances exhibit variations in properties when exposed to magnetic fields, as well as two other thermodynamic variables.  Such working fluids cannot be modeled with flowBench.
+
+By applying these assumptions to the governing equations, the following forms of mass, momentum, and energy conservation result.  For a more in-depth coverage of the mathematical formulation employed by flowBench, see “Chapter 19:  Mathematical Formulation and Numerical Approach.”
+Mass
+Conservation of mass states that the mass stored within any component is equal to the net mass entering and that generated or removed.  Although mass can neither be created nor destroyed, the generation term can be used to account for an injector adding mass to a cylinder or a water spray filling a tank.
+For a steady calculation, no storage can occur within a component.  This means that the total mass within any system is equal to the sum of that entering, leaving, and that generated.
+Momentum
+Conservation of momentum states that within any component or link, the sum of all driving forces is balanced by losses and any inertial effects.  flowBench accounts for inertia in two ways.  The first occurs in the case of an area change, where the average velocity at the entrance is not the same as that at the exit.  The second type of inertia is time related.  Inertia of this form occurs either when accelerating or decelerating a fluid.
+
+The flow resistance term accounts for frictional losses associated with shear at any solid/fluid interfaces as well as any minor losses.  Minor losses are associated with separated flow regions, where mechanical energy is lost in driving recirculating zones present within the separated regions.
+
+The additional driving force term is used to account for the presence of any fans, pumps, or blowers.  These driving forces are separate from any other pressure gradient that can induce flow.
+
+Finally, for a steady calculation, the time rate of change term is zero and the above equation simply state that a balance exists between the sum of the driving forces and loss terms.
+Energy
+Conservation of energy states that the time rate of change of energy contained within a component is equal to the net sum of the inflow, outflow, and that generated.  Enthalpy, rather than temperature, is solved for in flowBench so as to remove any computational difficulties associated with phase change and temperature dependent specific heat.
+
+The generation term is divided into two parts; that locally generated and that associated with compressibility effects.  Additionally, for a steady calculation the time rate of change term would be zero.
+
