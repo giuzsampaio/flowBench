@@ -1,0 +1,330 @@
+The flowBench Workspace
+The flowBench work environment consists of the following:  the main menu bar, the main taskbar, toolbox, and workspace.
+Main Menu bar
+Commands are grouped into menus that are listed in the menu bar under the following headings:  File, Edit, View, Model, Analyze, Tools, Window, and Help.  A pulldown menu is attached to each menu bar heading, and can be accessed through either the mouse or keystroke entry.  Some commands carry out an action immediately while others display a dialog box so that you can either enter data or select other options.
+Main Taskbar
+With the mouse, you can use taskbars for quick access to commonly used commands.  Only the commands that are valid at a given time are selectable.
+Toolbox
+Icons representing the components and links are contained within the toolbox.  The toolbox is directly attached to the left side of the workspace and will move with the workspace window.
+Workspace
+The workspace is the window in which a network is constructed.  As with the toolbox, the workspace can be detached from the application window and moved.  In addition, the rulers and grid lines can be turned on or off.  The units used for the rulers and grid lines correspond to the unit set selected in the View menu.
+The Main Taskbar
+
+
+There are eight pulldown menus in flowBench:  File, Edit, View, Model, Analyze, Tools, Window, and Help.  The main features in File, Edit, and Help conform to standard Windows protocols and your Windows reference manual describes the operation of these menus. Note also that most of the commands in the individual menus have either corresponding keystrokes or buttons on the toolbar for convenience in applying these commands.
+
+The File menu contains the following features:  New, Open…, Save, Save as…, Export, Copy to Clipboard Print…, and Exit. 
+
+·       Save:  when you save a network, the information associated with the components and links, as well as the environmental conditions and unit set, are saved with the default file extension *.mfp.  If a network is saved after a simulation has been completed, the additional information relating to the results are also saved in the *.mfp file.
+
+·       Export:  this command allows the user to export the entire or the visible portion of a workspace or a plot to a file of user-specifiable name . The available format options are:  bmp, gif, jpg, png, tif. This command is also used to export the information displayed in a table into a text file (*.csv) that can be imported into an Excel spreadsheet.
+
+·       Copy to Clipboard:  this command allows the user to copy the entire table or selected rows of a table of results created during postporcessing to a Clipboard and paste the Clipboard into a spreadsheet using the <Ctrl>-V command.
+
+The Edit menu contains the following features:  Undo, Redo, Cut, Copy, Copy Network From…, Paste, Delete, Select All, Rotate, Disconnect, Set Multiplier, Network Mode, and Wallpaper Mode.
+
+·       Undo:  allows the user to undo up to ten levels of commands.
+
+·       Redo:  allows the user to redo up to ten levels of commands.
+
+·       Copy Network From…:  this feature allows for previously constructed networks to be pasted into the current network.  This feature is useful when a sub-system is present in most of the networks you will be modeling. Using this feature, an entire network or only a portion of it that is highlighted can be added at a selected location in the workspace. 
+
+·       Rotate:  this option will rotate any selected components by 90-degree increments in the counterclockwise direction.  Rotation serves more than an aesthetic function for the Tee and Wyes, for which the orientation will correspond to that shown in the workspace. 
+
+·       Align:  this option will align selected components along a Vertical or a Horizontal line. The vertical alignment can be made along the Left, Middle, or Right positions of the selected components. Similarly, the horizontal alignment can be made along the Bottom, Middle, or Top positions of the selected components. Use of this option allows a neat rendering of the network model. 
+
+·       Disconnect:  this option disconnects, or breaks, either all selected components from their attached link/s or all selected links from their attached components.
+
+·       Set Multiplier…:  this option allows the user to increase the number of the selected component and links in parallel.
+
+·       Network Mode: This option allows the user to construct and edit the network. flowBench can be either in Network mode or Wallpaper mode. Network Mode can also be selected by clicking on the Network Mode icon on the Main Taskbar.
+
+·       Wallpaper Mode: This option allows the user to edit the wallpaper that forms the background of the workspace. Wallpaper Mode can also be selected by clicking on the Wallpaper Mode icon on the Main Taskbar. Wallpaper can be an already created image that is read in using the Insert Image button. Alternatively, a screenshot of the computer screen taken using the PrtScn command can be directly pasted as wallpaper using the Paste Screenshot button.
+
+The View menu contains the following features:  Show Rulers, Show Gridlines, Show Pagebreaks, Show Network, Show Wallpaper, Show Results, Show All Names, Show Selected Names, Show Flow Direction Arrows, Zoom Factors from 200% to 50%, Fit to Window, Zoom Other…, Zoom In Incremental, Zoom Out Incremental, Zoom to Selection Box, Workspace…, Find, Preferences .
+
+·       Show Rulers:  this option toggles the rulers on the workspace.  The units used on the rulers correspond to either inches or centimeters, depending on whether English or SI units are chosen.  For choosing the units see the Model menu description given below. 
+
+·       Show Gridlines:  this option toggles the display of grid lines on the workspace.  The grid lines will conform to either subdivisions of inches or centimeters, depending on whether centimeters or inches are specified for displaying grid lines and rulers in the Preferences menu.  For choosing the units see the Model menu description given below.
+
+·       Show Pagebreaks:  this option will toggle demarcation lines at the boundaries of pages.
+
+·       Show Network:  this option will toggle the display of the network.
+
+·       Show Wallpaper:  this option will toggle the display of the wallpaper.
+
+·       Show Results: this option will toggle the display of properties to be shown on the workspace. The set of properties and the components for which they are to be shown is selected from the Results and Names Shown option in the Analyze menu as described later in this chapter. This option is on by default.
+
+·       Show All Names: this option, when turned on, will enable display of names of all components and links on the network. When this option is turned on, it automatically disables the Show Selected Names option. Thus, it provides a quick way to enable display of all names. By default, the display of all names is active.
+
+·       Show Selected Names: this option will toggle the display of names of the set of components and links selected in the Properties and Names Shown option in the Analyze menu. When this option is enabled, the Show All Names option, if active, is automatically disabled. Thus, this option allows display of names of selected components in order to avoid crowding of the text on the screen. Note that at the most one of Show All Names and Show Selected Names options can be active at one time. User can also inactivate both options so that no names are displayed on the screen. By default, the display of selected names is inactive.
+
+·       Show Flow Direction Arrows: this option will toggle the display of the arrows on the links that show the direction of the flow. By default, this option is active. Note that the flow direction arrows can be drawn only if the results of the calculation are available after the last modification of the network properties. By default, this option is on.
+
+·       200% to 50%:  these options will zoom the workspace by the chosen percentage.
+
+·       Fit to Window:  the zoom is adjusted so as to display the complete workspace within the window.
+
+·       Zoom Other…:  this option provides the current zoom percentage and allows the user to enter any desired zoom percentage.
+
+·       Zoom In Incremental: this option allows incremental zooming in into the workspace.
+
+·       Zoom Out Incremental: this option allows incremental zooming out of the workspace.
+
+·       Zoom to Selection Box: this option allows the user to zoom to a rectangular box on the network.
+
+·       Workspace…:  this option controls the number and arrangement of pages within the workspace area where the network is constructed.  A maximum of 109 rows and 109 columns of pages are allowed in the workspace. The page size is chosen in the Preferences option.  At any time the user can increase the number of pages in the workspace, however, a reduction of pages is only allowed if those pages are not occupied by components or links.
+
+·       Find…:  allows the user to locate any link or component by name from a list.  The object is located and highlighted for easy identification.  A very useful function when working on large, complex networks.
+
+·       Preferences:  using this option the user can change the font, size, and color of the text appearing in the workspace, change the background color, and choose a unit for the gridlines. The choice of saving a picture of the Visible Portion or the Entire workspace can also be made. Finally, choices for Page Formatting  and Page Sizing can also be made. Thus, the page orientation (Portrait or Landscape) and page size (Letter, Legal, A4, Tabloid) can be chosen.
+
+The Model menu contains the following features:  Heat Transfer, Fluid Properties, Ambient Conditions, Initial Conditions, Units Stencil, Output Formats Stencil, Component Summary, and Notes.
+
+·       Heat Transfer:  this option toggles the heat transfer solver.  You can choose to either include or omit the solution of the energy equation. 
+
+·       Fluid Properties…:  this option displays a dialog that allows for the specification of either a specific gas/fluid from the library or user specification through correlations. 
+
+·       Ambient Conditions…:  this option displays a dialog that allows specification of ambient pressure and temperature.  These values will establish the default conditions for all boundary components. The ambient conditions can be specified as using actual values of pressure and temperature, altitude-based pressure and actual temperature, or altitude-based pressure and temperature. 
+
+·       Initial Conditions…:  this option displays a dialog that allows specification of the initial pressure and temperature in an unsteady calculation. By default, these conditions are set to the Ambient Conditions. Further, if heat transfer is inactive, analysis is carried out for a constant temperature (constant Total Temperature in case of Compressible Flow). In that case, this temperature is set equal to the Ambient Temperature so that the value of the initial temperature is not independently specified and the temperature section in the Initial Conditions dialog is deactivated. By default, the Initial Conditions option in the Model menu is inactive and analysis is assumed to be for steady state conditions. This option is automatically activated only when the model involves time varying conditions (e.g. boundary pressure and valve opening) and requires an unsteady analysis.
+
+·       Units Stencil:  this option allows the user to specify any desired unit for all of the physical quantities used in flowBench. The units specified in the units stencil are the default units for throughout the program. 
+
+·       Output Formats Stencil:  this option allows the user to specify any desired formats (Standard, Exponent, Float, or Integer) for all of the physical quantities that are displayed as results in tables, on-screen display, or network summary spreadsheets. 
+
+·       NetworkSummary :  this option allows the user to create a summary of the characteristics of all the components used in the network model in a Master Spreadsheet. The results of analysis can also be included in the summary spreadsheet.
+
+·       Notes :  this option allows the user to create suitable textual notes regarding the network model. Each note is tagged with the time at which it was created and the model name in which it was written. All the notes are saved with the model file. Hence this feature allows the user to save important comments with the network for the purposes of documentation and future reference.
+
+The Analyze menu contains the following features:  Check Network…,  Run…,  Post Processing…, Animate Flow, and Results and Names Shown….
+
+·       Check Network…:  this option performs basic checks to ensure that the model is setup in a complete and consistent manner. A list of errors and warnings is provided of any detected inconsistencies. 
+
+·       Run…:  this option displays a dialog that allows for the specification of relaxation factors, number of iterations, and convergence criterion.  For a transient case the time step size and number of time steps can also be specified. 
+
+·       Post Processing…:  this option displays a dialog that allows for the specification of graphical and tabular output.
+
+·       Animate Flow:  this option starts the flow animation and opens an animation control dialog.
+
+·       Results and Names Shown…:  this option displays a dialog that enables the selection of a set of properties, and a set of components and links for which the selected properties can be shown. In addition, it also enables selection of a set of components and links to which the on-screen display of names can be restricted using the Show Selected Names command in the View menu. 
+
+The Tools menu contains the Database feature that enables users to view the available sets of units, correlations, and style sheets.  Using this feature, the user can also modify, rename, or delete the user-defined units, correlations, and style sheets.  Tools menu also contains the Global Editing facility that allows the user, in one dialog, to alter one or more characteristics of a component across the entire network. Finally, the Settings option opens a dialog that allows the user to automatically account for mass storage in the link and component (Bend, Gradual Area Change) volumes for analysis in compressible flow situations.  For this purpose, half of the volume of each link/component is added to the volumes of each of the two nodes at the end of that link in the internal representation of the network model. 
+
+The Window menu aids in window management by providing global commands that affect all windows within the workspace.  Additionally, a list of all windows is provided at the bottom of the dialog.  This menu contains the following:  Cascade, Tile, Arrange Icons, Close All Stale, Close All Plots, and Close All Tables. 
+
+·       Cascade:  when selected, all windows within the workspace are stacked with a slight offset.
+
+·       Tile:  when selected, all windows within the workspace are resized and placed next to each other.  This option permits the display of all the windows. 
+
+·       Arrange Icons:  when selected, all ionized windows are placed along the bottom of the workspace. 
+
+·       Close All Stale:  when selected, all plots and tables not corresponding to the current set of network inputs are closed. 
+
+·       Close All Plots:  when selected, all plot windows are closed. 
+
+·       Close All Tables:  when selected, all table windows are closed. 
+
+The Help menu provides access to online help.  Through these options, help on specific topics can be provided.
+
+·       Contents:  when selected, a help dialog appears which has three tabs, Contents, Index, and Search. Under the Contents tab, a table of contents for the online help is displayed.  Each item on the list is a “hot link” to that specific section of the online help document. Under the Index tab, a list of keywords index appears. Again, each item on the list is a “hot link” to the corresponding page in the help document. To find a particular keyword from the list, user can type the keyword on the provided text box and the index list scrolls down to the nearest word to that keyword. Using the Search tab, user can search for a word or a phrase in the help document and all the occurrences of that word/phrase will be listed as “hot links
+The Toolbox
+The toolbox contains the buttons corresponding to the components and links.  Using the mouse, a particular component can be selected by moving the mouse over the desired component and clicking once.  If more than one of a component is needed for a network, double-click over the component.  Then multiple placements can be made without having to re-select the component.  To end the selection of a component, select any other component or the multi-tool. 
+
+Multi-Tool 
+
+
+
+The Multi-Tool combines many functions into a single tool providing both convenience and flexibility.  It can be used to select menus and menu options, components, and as a pointing device.  In the workspace area it can be used to select and move components and links, to draw “rubber band” boxes for group selection, and to display the input dialog for a desired component or connector.  Finally it is also used to draw links between components.
+
+Results Probe
+
+
+
+The Results Probe can be used to view the results of the simulation for any component or link.  The Results Probe is activated only after the run is completed.  By clicking on the Results Probe Icon, cursor changes to the Results Probe.  It can be placed on any component and link to view the corresponding output quantities. Note that the Results Probe shows only the output quantities selected in the Properties Shown dialog.
+
+Tee
+
+
+
+The Tee is a connection of three ducts. The Tee may have either rounded or sharp corners but is restricted to a 90-degree angle.
+
+Cross 
+
+
+
+The Cross is a connection of four ducts.  The Cross may have either sharp or rounded corners
+
+Wye (Symmetric and Asymmetric)
+
+
+
+The Wye is also a connection of three ducts.  A Wye may be Symmetric or Asymmetric and have either rounded or sharp corners.  The included half angle, for the Symmetric Wye, and the whole angle for the Asymmetric Wye can be specified between 15 and 90-degrees.
+
+Bend
+
+The Bend represents a curvature in a flow connection.  The Bend can be smooth or sharp, with user specified data for the overall angle, duct roughness, and corner characteristics.  A user defined resistance correlation can also be used.
+
+Coil 
+
+The Coil is a curvature in a flow connection.  The nondimensional radius of curvature and surface roughness can be specified. A user defined resistance correlation can also be used.
+
+Area Change
+
+The Area Change represents a change in cross section between two ducts.  The change in area can be either abrupt, rounded edge, or gradual. A user defined resistance correlation can also be used.
+
+Orifice 
+
+The Orifice consists of a single flow obstruction that can be either sharp or smooth. In addition, a change of area of the connecting ducts is valid across an orifice. User needs to provide information about the cross-sectional shape (circular, rectangular, hexagonal, or other) of the orifice. A user defined resistance correlation can also be used.
+
+Screen
+
+The Screen is a flow obstruction composed of either a large number of holes (orifices)  or a wire mesh. In the multiple hole cases, user can specify the information about the cross-sectional shape of each hole (orifice) that makes up the screen. Only the wire diameter is specified for the wire mesh. A user defined resistance correlation can also be used.
+
+Valve
+
+The Valve consists of standard, transient, and user defined. The standard and transient valves include the following types:  butterfly, swing, spherical ball, conventional gate, disk type gate, conventional globe, and direct flow globe.  The characteristics of a user-defined valve can be specified in a variety of functional forms.
+
+Inlet/Exhaust with a Screen
+
+The Inlet/Exhaust with a Screen combines the losses associated with an inlet/exhaust and those of the screen.  For example, this component can be used in the case of filtered intakes or showerheads. User can specify the information about the cross-sectional shape of each hole (orifice) that makes up the screen if the screen is made of holes. For a screen made of a wire mesh, the wire diameter is specified. A user defined resistance correlation can also be used to override the default. 
+
+Inlet/Exhaust 
+
+The Inlet/Exhaust can be either straight or bell mouthed.  The bell mouth case can also be either free standing or wall mounted. A user defined resistance correlation can also be used.
+
+Nozzle 
+
+The Nozzle represents a gradual area reduction exhaust. A user defined resistance correlation can also be used to override the default.
+
+Filter
+
+Filter is used to remove particulate matter from the fluid flowing through the system. Characteristics of the filter can be defined using the library, standard, and user defined options. The standard library of flowBench contains the characteristics of filters offered by Universal Air Filter (www.uaf.com).  Users can also create library entries for filters not included in the standard library. The standard option provides the user an alternative method of specifying the characteristics. Finally, the user defined option allows the user to specify flow resistance characteristics using various functional forms. flowBench can simulate both steady state performance and performance over time based on dust loading models.
+
+Fan 
+
+The Fan can be either selected from a library or can be user-defined. flowBench contains a library of characteristics of fans offered by Dynamic Air Engineering, Inc. (www.dynamic-air.com), Comair Rotron (www.comairrotron.com), and JMC (www.jmcproducts.com). Users can add entries to the library or define fan head characteristics using the user defined option. In addition, modification of fan characteristics due to changes in density or fan speed and any additional losses can also be specified through the Advanced Fan dialog.
+
+Pump 
+
+The Pump can be either selected from a library or custom defined.  Features of Pump component are similar to Fan. 
+
+Heat Sink
+
+Heat sink is a device used for effective transfer of the heat dissipated from a semiconductor to the system-cooling medium by providing additional surface area for heat transfer. The standard option allows analysis of a plate-fin heat sink by specifying the geometrical parameters of the heat sink such as base height, fins length, and number of fins. Heat transfer within the heat sink also considers the substrate thickness and finite area of the heat source to account for the spreading resistance within the substrate and base of the heat sink. The user defined option is useful for specifying the flow and thermal characteristics of heat sinks of more complex geometries. In both cases, the effect of flow bypass can be analyzed by specifying appropriate bypass areas around the heat sink. 
+
+Fan Heat Sink
+
+Fan Heat sink is a device used for cooling of a CPU in a localized manner. The flow enters the heat sink from the top, impinges on the base of the heat sink and flows out from the sides. The characteristics of the fan that drives the impinging flow have to be specified separately.
+
+Card Passage 
+
+The Card Passage component is used to analyze the flow and heat transfer in passages formed between successive cards encountered in electronics systems. In the standard option, the flow and heat transfer characteristics of the card passage are determined from the geometry of the card passage. The user defined option allows specification of the overall flow and heat transfer characteristics of a card passage based on independent measurements or analysis.
+
+Power Supply
+
+The Power Supply is a useful component for electronics cooling applications. Internal flow and thermal resistances of the Power Supply can be specified through user-defined correlations. 
+
+Heat Exchanger
+
+Heat Exchanger is a device used for effective heat transfer between the system-side fluid and an external fluid. The characteristics of a heat exchanger can be defined using library, standard, and user-defined options. The standard library contains flow and thermal characteristics of heat exchanger products offered by Lytron (www.lytron.com). User can also add library entries for representing characteristics of heat exchangers not included in the library. The standard option allows characterization of a heat exchanger made of corrugated fins. The user defined option provides a method to specify the flow and heat transfer characteristics of a non-standard heat exchanger.  
+
+Cold Plate
+
+The Cold Plate is a useful component for the analysis of liquid-cooled electronics systems. The flow and thermal resistance characteristics can be defined using the library or the user defined options. The standard library of flowBench includes characteristics of cold plates offered by Lytron (www.lytron.com). User can also add entries to the library by specifying flow and heat transfer characteristics of other cold plates of interest.
+
+Quick Disconnect
+
+Liquid distribution and cooling systems employ Quick Disconnect components for convenience in isolating individual parts of the systems during servicing and retrofitting.  The flow characteristics of a Quick Disconnect may depend on the direction of flow. The standard library of flowBench includes characteristics of Quick Disconnects offered by Aeroquip (www.aeroquip.com) and Staubli Corporation (www.staubli.com). User can also add entries to the library by specifying the relevant flow characteristics.
+
+Flow Map
+
+The Flow Map is a useful component for representing the flow behavior of a component or a subsystem under a range of flow rates and operating conditions. The flow resistance characteristics can be defined using the library or the user defined options. It should be noted that the Flow Map characteristics are valid for a specific fluid.
+
+Gas Filter
+
+The Gas Filter is used for modeling the behavior of filters utilized in ultra-high purity gas flow systems encountered in semiconductor and chemical processing applications. flowBench includes characteristics of gas filters offered by Entegris (www.entegris.com) and Mott Corporation (www.mottcorp.com) that are employed in high-purity gas flow applications.
+
+Vacuum Pump
+
+The Vacuum Pump is used in the analysis of the flow behavior of gas flow systems in semiconductor and chemical processing applications in which typically a reactor chamber is maintained at a very low pressure using a powerful vacuum pump.
+
+Rotating Duct
+
+The Rotating Passage is a used for modeling the pumping action produced in rotating flow passages. Such passages are used for forced-flow cooling of rotating machinery. 
+
+Generic Resistance (Advanced Component)
+
+The Generic Resistance can be used to represent a component that is not available in the Toolbox.  Namely, the pressure drop across the resistance can be specified using a variety of User-Defined correlations.   This allows a user to incorporate unique components into a network. 
+
+Generic Node (Advanced Component)
+
+The Generic Node represents a location within a network at which either scalar information is desired, such as pressure or material properties, or as a connecting junction.  In addition, volume and heat or mass generation can be specified for a generic node.  The Generic Node can also be employed as an instrument point.
+
+Boundary Node (Advanced Component)
+
+The Boundary Node represents a specified atmospheric state and requires the specification of pressure and temperature.
+
+ToolBox Toggle (Display Dependent)
+
+The Toolbox Toggle will appear if flowBench determines that either your screen display or the window size is insufficient to be completely displayed.  By selecting this button, the component buttons not currently visible will be displayed in sequential groups.
+
+Using Dialogs
+When you choose some commands or double click on a component or links, a dialog box will appear so that you can specify inputs or select options.  If an input field is dimmed, it is not currently applicable.  In general, any option that is followed by a “…” will result in a dialog.
+
+
+
+Some dialog boxes provide sets of options, each on a separate tab.  For example, the bend dialog has three tabs:  General, Properties, and Heat Transfer.
+
+Although it’s usually easier to use a mouse while you work in a dialog box, you can also select options or fill in information with the keyboard.  For example, to move among options, press TAB.  To choose the CANCEL button, press ENTER.
+
+All components and link dialogs have two special buttons called Save Default and Use Default. The Save Default button will save the input data of the current component/link as the default data. For example, if user clicks the Save Default button on the bend dialog and then clicks the OK button, any bends placed on the workspace after this bend will have the identical data input. The Use default applies to bends that have been placed in the workspace before this bend. Clicking on the Use Default button will make the input data of the current bend identical to the default bend.
+Editing and Viewing Correlations in Dialogs
+flowBench allows users to define the simulation data in the form of correlations. Examples of these correlations include Flow resistance correlations for components and links, fan performance curves, fluid property variation with temperature, heat transfer coefficient variation with flow rate, etc. These correlations can be defined in the form of mathematical formula or X-Y tables. A sample of such a dialog for fluid properties is shown below. 
+
+Getting to Work
+This section explains the basic procedures for creating new documents, saving your work, opening existing documents, and printing.
+
+Creating a Network
+
+To create a new network at any time, click the New Button on the Main taskbar or choose New from the File menu.  A component toolbox and associated workspace will open.
+
+Selecting and Placing Components
+
+Component selection and placement procedures follow the standards used in Windows drawing packages.  Namely, a component is selected from the toolbox and is then placed within the workspace.  To enable multiple placements of the same component, simply double-click the desired component.
+
+Connecting Components
+
+To connect two components, first select the Multi-Tool button. Then, simply move the mouse over the first unfulfilled connection, depress the mouse, and drag the wrench to the other desired unfulfilled connection.  At this point, release the mouse button and the connection has been established.
+
+Deleting Components and Links
+
+Deleting components and links follows standard Windows protocol.  Namely, click on the object you wish to delete and then press either BACKSPACE or DELETE.  As with most Windows programs, multiple selection is achieved by pushing the SHIFT key while using the mouse.  Also note that a region of components can be selected by depressing and holding the mouse and enclosing the desired region within the selected box. 
+
+Although a component is deleted, the links connected to it are not deleted. Thus, the characteristics of these links do not have to be redefined. An original link can then be connected to the newly placed component by dragging the dangling end to the component port. Note that, if the new component has number of ports different than the original component, changes are required in other parts of the system.
+
+If the deleted component is replaced by another component having the same number of ports, all the dangling links can be connected to the new component.
+
+Opening a Network
+
+To open a document, click the Open Button on the Main Taskbar or choose Open from the File menu.  When the dialog box appears, select the document in the File Name box, and then choose the OK button. Remember that flowBench project files end in .mfp.
+
+The dialog box initially lists files in the directory or folder in which you last saved or opened a document.  If the file you want is not listed, click another drive or folder.
+
+Saving a Network
+
+To save a document on disk, click the Save button on the Main Taskbar or choose Save from the File menu.  When you save a network for the first time, flowBench displays the Save As dialog box so that you can type a name for the document.  It’s best to let flowBench supply the default extension for project files, which is .mfp.
+
+Printing a Network
+
+Before you print a network, quickly check to ensure that no page breaks occur in unanticipated locations.  This is done by selecting Show Pagebreaks in the View pull-down menu.  When you’re ready to print, click the Print Button on the Main Taskbar or choose Print from the File menu.
+
+To print a graph or table, make the desired window active by selecting it with the mouse.  After selecting the desired graph or table, click the Print Button.
+
+Closing a Network and Quitting flowBench
+
+If you’ve finished working with flowBench, close the active network and then quit flowBench by choosing Exit from the File menu.  To work on another network in flowBench, close the active document by choosing Open from the New menu, and then open the other network.
+
+
+flowBench allows users to define, edit, view, save, or delete correlations. To do this, two special buttons are placed in the right hand side of each correlation listbox - Edit button (First Icon showing a Pen and Paper) and View (Second Icon showing a Paper with a Magnifying Lens) button. By clicking the Edit buttons a new dialog pops up. User can define a new correlation, change an existing correlation, and save a correlation through this dialog. By clicking the View button, user can see the status of the current correlation but will not be able to change it. Deleting an existing correlation is possible through the Database facility under the Tools menu.
+
